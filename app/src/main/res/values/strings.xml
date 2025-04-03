@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CatalogoColecionador</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="edt_nome">Nome do item</string>
+    <string name="edt_valor">Valor de venda</string>
+    <string name="edt_url">Url da imagem</string>
 </resources>
