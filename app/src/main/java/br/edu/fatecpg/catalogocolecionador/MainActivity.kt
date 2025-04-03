@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import br.edu.fatecpg.catalogocolecionador.dao.ItemDao
 import br.edu.fatecpg.catalogocolecionador.model.Item
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

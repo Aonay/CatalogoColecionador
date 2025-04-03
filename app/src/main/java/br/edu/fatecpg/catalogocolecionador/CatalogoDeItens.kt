@@ -1,20 +1,25 @@
 package br.edu.fatecpg.catalogocolecionador
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import br.edu.fatecpg.catalogocolecionador.adapter.ItemAdapter
+import br.edu.fatecpg.catalogocolecionador.dao.ItemDao
 
-class CatalogoDeItens : AppCompatActivity() {
+class CatalogoDeItens : AppCompatActivity(R.layout.activity_catalogo_de_itens) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_catalogo_de_itens)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val dao = ItemDao()
+        val itens = dao.getitens()
+
+        val rvItens = findViewById<RecyclerView>(R.id.rv_itens)
+        rvItens.layoutManager = LinearLayoutManager(this)
+        rvItens.adapter = ItemAdapter(itens)
+
     }
 }
