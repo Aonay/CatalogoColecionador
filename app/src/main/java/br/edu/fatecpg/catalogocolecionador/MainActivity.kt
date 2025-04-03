@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import br.edu.fatecpg.catalogocolecionador.dao.ItemDao
+import br.edu.fatecpg.catalogocolecionador.model.Item
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +22,24 @@ class MainActivity : AppCompatActivity() {
         val edtUrl = findViewById<EditText>(R.id.edt_urlImagem)
         val btn_Cadastrar = findViewById<Button>(R.id.btn_cadastrar)
         val txvVerLista = findViewById<TextView>(R.id.txv_verlista)
+        val dao = ItemDao()
 
         txvVerLista.setOnClickListener {
-            val intent = Intent(this,)
+            val intent = Intent(this,CatalogoDeItens::class.java)
+            startActivity(intent)
+        }
+
+        btn_Cadastrar.setOnClickListener {
+            val nome = edtNome.text.toString()
+            val valor = edtValor.text.toString().toDouble()
+            val urlImagem = edtUrl.text.toString()
+
+            val item = Item(
+                nome = nome,
+                valor = valor,
+                url = urlImagem
+            )
+            dao.additem(item)
         }
 
 
