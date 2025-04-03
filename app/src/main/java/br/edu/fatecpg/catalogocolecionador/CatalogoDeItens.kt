@@ -16,6 +16,7 @@ class CatalogoDeItens : AppCompatActivity(R.layout.activity_catalogo_de_itens) {
 
         val dao = ItemDao()
         val itens = dao.getitens()
+        Log.i("items",itens.toString())
 
         val rvItens = findViewById<RecyclerView>(R.id.rv_itens)
         rvItens.layoutManager = LinearLayoutManager(this)

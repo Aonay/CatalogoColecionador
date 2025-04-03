@@ -12,7 +12,7 @@ class ItemAdapter (private val items:List<Item>) : RecyclerView.Adapter<ItemAdap
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val txvNome = itemView.findViewById<TextView>(R.id.txv_item_nome)
         val txvValor = itemView.findViewById<TextView>(R.id.txv_item_valor)
-        val edtImagem = itemView.findViewById<TextView>(R.id.edt_urlImagem)
+        //val edtImagem = itemView.findViewById<TextView>(R.id.edt_urlImagem)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,7 +24,7 @@ class ItemAdapter (private val items:List<Item>) : RecyclerView.Adapter<ItemAdap
         val item = items[position]
         holder.txvNome.text = item.nome
         holder.txvValor.text = item.valor.toString()
-        holder.edtImagem.text = item.url
+        //holder.edtImagem.text = item.url
     }
 
     override fun getItemCount(): Int {
