@@ -4,4 +4,5 @@
     <string name="edt_nome">Nome do item</string>
     <string name="edt_valor">Valor de venda</string>
     <string name="edt_url">Url da imagem</string>
+    <string name="edt_verCatalogo">Ver Catálogo</string>
 </resources>

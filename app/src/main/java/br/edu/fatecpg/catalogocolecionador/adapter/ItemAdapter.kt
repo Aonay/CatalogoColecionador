@@ -10,8 +10,8 @@ import br.edu.fatecpg.catalogocolecionador.R
 
 class ItemAdapter (private val items:List<Item>) : RecyclerView.Adapter<ItemAdapter.ViewHolder>(){
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val txvNome = itemView.findViewById<TextView>(R.id.txv_nome)
-        val txvValor = itemView.findViewById<TextView>(R.id.txv_valor)
+        val txvNome = itemView.findViewById<TextView>(R.id.txv_item_nome)
+        val txvValor = itemView.findViewById<TextView>(R.id.txv_item_valor)
         val edtImagem = itemView.findViewById<TextView>(R.id.edt_urlImagem)
     }
 

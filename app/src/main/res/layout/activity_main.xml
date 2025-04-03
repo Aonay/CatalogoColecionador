@@ -5,13 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3ded97"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txv_verlista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/edt_verCatalogo"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +25,9 @@
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
+        android:background="@drawable/shape_back_top"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +36,8 @@
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_back_boton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,11 +45,13 @@
 
     <EditText
         android:id="@+id/edt_nome"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:autofillHints=""
+        android:background="@drawable/edt_rounded"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/edt_nome"
         android:inputType="text"
         android:minHeight="48dp"
@@ -57,11 +64,13 @@
 
     <EditText
         android:id="@+id/edt_valor"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:autofillHints=""
+        android:background="@drawable/edt_rounded"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/edt_valor"
         android:inputType="text"
         android:minHeight="48dp"
@@ -74,10 +83,13 @@
 
     <EditText
         android:id="@+id/edt_urlImagem"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edt_rounded"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/edt_url"
         android:inputType="text"
         android:minHeight="48dp"
@@ -91,7 +103,7 @@
     <Button
         android:id="@+id/btn_cadastrar"
         android:layout_width="204dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:text="@string/btn_cadastrar"
         android:textSize="20sp"
@@ -99,5 +111,27 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_urlImagem" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="152dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/bauuu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Colecionadores"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

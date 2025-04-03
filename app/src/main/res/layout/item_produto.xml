@@ -31,14 +31,14 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txv_nome"
+                        android:id="@+id/txv_item_nome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
                         android:text="TextView" />
 
                     <TextView
-                        android:id="@+id/txv_valor"
+                        android:id="@+id/txv_item_valor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
@@ -55,8 +55,8 @@
                         android:id="@+id/btn_2"
                         android:layout_width="139dp"
                         android:layout_height="wrap_content"
-                        android:text="Whatsapp"
-                        android:layout_marginLeft="20dp" />
+                        android:layout_marginLeft="20dp"
+                        android:text="Whatsapp" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
